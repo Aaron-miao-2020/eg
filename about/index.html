@@ -7,6 +7,42 @@
 <meta name="description" content="关于谔谷">
 <meta name="author" content="miaohongxuan,谔谷">
 <style>
+    /* 头部样式 */
+.header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+    /* 创建三个不相等的列 */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* 左右两侧宽度 */
+.column.side {
+  width: 25%;
+}
+
+/* 中间区域宽度 */
+.column.middle {
+  width: 50%;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 响应式布局 - 宽度小于600px时设置上下布局 */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/*************导航栏****************/
 ul {
     list-style-type: none;
     margin: 0;
